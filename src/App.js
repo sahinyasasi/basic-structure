@@ -1,6 +1,26 @@
 import React from "react";
 import "./App.css";
-import { Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import CoButton from "./CoButton";
+const useStyles = makeStyles({
+  buttonStyles: {
+    color: "red",
+  },
+});
+export default function App() {
+  const classes = useStyles();
+  const cool = true;
+
+  return (
+    <>
+      <Button className={classes.buttonStyles}>small button</Button>
+      <br />
+      <CoButton cool={cool} />
+    </>
+  );
+}
+/*import { Grid } from "@material-ui/core";
 import Header from "./Header";
 import Content from "./Content";
 
@@ -20,4 +40,4 @@ const App = () => {
     </Grid>
   );
 };
-export default App;
+export default App;*/

@@ -1,13 +1,12 @@
-import React, { Fragment } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from "react";
+import { Button } from "@material-ui/core";
+
 import "./App.css";
 
-const App = () => (
-  <Router>
-    <Fragment>
-      {/*<Route exact path='/' component={Landing} />*/}
-      <h1>App</h1>
-    </Fragment>
-  </Router>
-);
-export default App;
+export default function () {
+  return (
+    <div className='App'>
+      <Button></Button>
+    </div>
+  );
+}

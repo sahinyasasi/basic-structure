@@ -1,34 +1,22 @@
 import React from "react";
 import "./App.css";
-import { Button, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
+import Header from "./Header";
 
-const useStyles = makeStyles({
-  helloThereStyle: {
-    fontStyle: "oblique",
-    color: "red",
-    fontSize: "50px",
-  },
-  buttonStyles: {
-    color: "green",
-    border: 0,
-  },
-});
-
-export default function () {
-  const classes = useStyles();
+const App = () => {
   return (
-    <div className='App'>
-      <Typography className={classes.helloThereStyle} variant='h1'>
-        Hello Der!
-      </Typography>
-      <Button
-        className={classes.buttonStyles}
-        color='secondary'
-        variant='outlined'
-      >
-        This is our button
-      </Button>
-    </div>
+    <Grid container direction='column'>
+      <Grid item>
+        <Header />
+      </Grid>
+      <Grid item container>
+        <Grid item xs={0} sm={2} />
+        <Grid item xs={12} sm={8}>
+          content
+        </Grid>
+        <Grid item xs={0} sm={2} />
+      </Grid>
+    </Grid>
   );
-}
+};
+export default App;
